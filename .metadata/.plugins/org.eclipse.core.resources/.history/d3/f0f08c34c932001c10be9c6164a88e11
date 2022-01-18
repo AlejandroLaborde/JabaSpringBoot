@@ -1,0 +1,6 @@
+package com.ar.form.controllers;
+
+@controller
+public class FormControler {
+
+}

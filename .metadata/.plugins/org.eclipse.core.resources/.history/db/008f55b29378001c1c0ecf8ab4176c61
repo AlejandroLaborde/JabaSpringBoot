@@ -1,0 +1,14 @@
+package com.ar.form.models.entity;
+
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "clientes")
+public class Cliente implements Serializable {
+
+	private Long id;
+	private static final long serialVersionUID = 8616715561631239439L;
+	
+}

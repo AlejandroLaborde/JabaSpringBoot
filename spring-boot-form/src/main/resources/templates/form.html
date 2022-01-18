@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+	<h3 th:text="${titulo}"></h3>
+    <form th:action="@{/form}" method="post">
+    
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="">
+        </div>
+        
+        <div th:if="${error!=null && error.containsKey('username') }">
+            <ul>
+        		<li th:text="${error.username}"></li>
+        	</ul>
+        </div>
+        
+
+        <div>
+            <label for="password">password</label>
+            <input type="password" name="password" id="">
+        </div>
+        
+        <div th:if="${error!=null && error.containsKey('password') }">
+            <ul>
+        		<li th:text="${error.password}"></li>
+        	</ul>
+        </div>
+        
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="">
+        </div>
+		<div th:if="${error!=null && error.containsKey('email') }">
+            <ul>
+        		<li th:text="${error.email}"></li>
+        	</ul>
+        </div>
+
+
+        <div>
+            <button type="submit" value="Enviar">Enviar</button>
+        </div>
+        
+        
+
+    </form>
+</body>
+</html>

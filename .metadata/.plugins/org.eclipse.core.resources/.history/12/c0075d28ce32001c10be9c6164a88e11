@@ -1,0 +1,5 @@
+package com.ar.form.models;
+
+public class User {
+
+}

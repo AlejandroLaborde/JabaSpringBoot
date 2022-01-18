@@ -1,0 +1,26 @@
+package com.ar.form.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.ar.form.models.Model;
+
+@Controller
+public class FormControler {
+
+	@GetMapping("/form")
+	public String form(Model model) {
+		return "";
+	}
+	
+	@PostMapping("/form")
+	public String procesarFormulario(Model model, 
+			@RequestParam String username, 
+			@RequestParam String password,
+			@RequestParam String email) {
+		return "";
+	}
+	
+}
